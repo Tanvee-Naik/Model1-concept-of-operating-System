@@ -1,3 +1,188 @@
+Problem 1:
+
+a) Navigate and List:
+a. Start by navigating to your home directory and list its contents. Then, move into a 
+directory named "LinuxAssignment" if it exists; otherwise, create it.
+
+tanvee@LAPTOP-2EIP57DT:~$ mkdir LinuxAssignment
+
+
+b) File Management:
+   a. Inside the "LinuxAssignment" directory, create a new file named "file1.txt". Display its 
+   contents.
+tanvee@LAPTOP-2EIP57DT:~$ cd LinuxAssignment
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ cat > file1.txt
+This is Assignment 1.
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ cat file1.txt
+This is Assignment 1.
+
+c) Directory Management:
+   a. Create a new directory named "docs" inside the "LinuxAssignment" directory. 
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ mkdir docs
+
+
+d) Copy and Move Files:
+   a. Copy the "file1.txt" file into the "docs" directory and rename it to "file2.txt". 
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ cp file1.txt docs
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ mv file1.txt file2.txt
+
+e) Permissions and Ownership:
+   a. Change the permissions of "file2.txt" to allow read, write, and execute permissions for 
+   the owner and only read permissions for others. Then, change the owner of "file2.txt" to 
+   the current user. 
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ ls -l -a
+total 16
+drwxr-xr-x  3 tanvee tanvee 4096 Mar  7 18:02 .
+drwxr-x--- 18 tanvee tanvee 4096 Mar  7 17:53 ..
+drwxr-xr-x  2 tanvee tanvee 4096 Mar  7 18:00 docs
+-rw-r--r--  1 tanvee tanvee   22 Mar  7 17:55 file2.txt
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ chmod 744 file2.txt
+
+f) Final Checklist:
+   a. Finally, list the contents of the "LinuxAssignment" directory and the root directory to 
+   ensure that all operations were performed correctly. 
+
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ ls -a -l
+total 16
+drwxr-xr-x  3 tanvee tanvee 4096 Mar  7 18:02 .
+drwxr-x--- 18 tanvee tanvee 4096 Mar  7 17:53 ..
+drwxr-xr-x  2 tanvee tanvee 4096 Mar  7 18:00 docs
+-rwxr--r--  1 tanvee tanvee   22 Mar  7 17:55 file2.txt
+
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ cd docs
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/docs$ ls -a -l
+total 12
+drwxr-xr-x 2 tanvee tanvee 4096 Mar  7 18:00 .
+drwxr-xr-x 3 tanvee tanvee 4096 Mar  7 18:02 ..
+-rw-r--r-- 1 tanvee tanvee   22 Mar  7 18:00 file1.txt
+
+
+
+g) File Searching:
+   a. Search for all files with the extension ".txt" in the current directory and its subdirectories. 
+   b. Display lines containing a specific word in a file (provide a file name and the specific 
+      word to search)
+
+tanvee@LAPTOP-2EIP57DT:~$ cd LinuxAssignment
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ ls *.txt
+file2.txt
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ cd ..
+tanvee@LAPTOP-2EIP57DT:~$ ls *.txt
+A.txt  Names.txt
+
+B.txt:
+
+bb.txt:
+aa.txt
+
+
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ grep This file2.txt
+This is Assignment 1.
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ grep -i this file2.txt
+This is Assignment 1.
+
+
+h) System Information:
+   a. Display the current system date and time
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ date
+Thu Mar  7 18:40:02 IST 2024
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ time
+
+real    0m0.000s
+user    0m0.000s
+sys     0m0.000s
+
+i) Networking:
+   a. Display the IP address of the system. 
+   b. Ping a remote server to check connectivity (provide a remote server address to ping). 
+
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ ip add
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:13:e7:ce brd ff:ff:ff:ff:ff:ff
+    inet 172.31.59.82/20 brd 172.31.63.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe13:e7ce/64 scope link
+       valid_lft forever preferred_lft forever
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ ping www.google.com
+PING www.google.com (142.250.183.68) 56(84) bytes of data.
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=1 ttl=57 time=5.26 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=2 ttl=57 time=6.11 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=3 ttl=57 time=7.86 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=4 ttl=57 time=6.65 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=5 ttl=57 time=15.5 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=6 ttl=57 time=18.8 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=7 ttl=57 time=11.1 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=8 ttl=57 time=39.4 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=9 ttl=57 time=59.0 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=10 ttl=57 time=7.66 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=11 ttl=57 time=26.0 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=12 ttl=57 time=6.02 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=13 ttl=57 time=6.13 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=14 ttl=57 time=8.16 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=15 ttl=57 time=10.0 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=16 ttl=57 time=22.9 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=17 ttl=57 time=5.73 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=18 ttl=57 time=34.8 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=19 ttl=57 time=46.0 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=20 ttl=57 time=67.5 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=21 ttl=57 time=30.3 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=22 ttl=57 time=6.24 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=23 ttl=57 time=6.29 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=24 ttl=57 time=6.47 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=25 ttl=57 time=9.15 ms
+64 bytes from bom12s12-in-f4.1e100.net (142.250.183.68): icmp_seq=26 ttl=57 time=5.86 ms
+^C
+--- www.google.com ping statistics ---
+26 packets transmitted, 26 received, 0% packet loss, time 25041ms
+rtt min/avg/max/mdev = 5.260/18.266/67.545/17.340 ms
+
+
+j) File Compression:
+   a. Compress the "docs" directory into a zip file. 
+   b. Extract the contents of the zip file into a new directory. 
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ zip docs.zip docs
+  adding: docs/ (stored 0%)
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment$ unzip docs.zip -d new
+Archive:  docs.zip
+   creating: new/docs/
+
+
+k) File Editing:
+   a. Open the "file1.txt" file in a text editor and add some text to it. 
+   b. Replace a specific word in the "file1.txt" file with another word (provide the original 
+      word and the word to replace it with).
+
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ cat >> file1.txt
+hello , this is assignment number 1.
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ cat file1.txt
+hello , this is assignment number 1.
+
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ cat file1.txt | tr 'hello' 'Hie'
+Hieee , tHis is assignmint numbir 1.
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Problem 2:
 a. Suppose you have a file named "data.txt" containing important information. Display the 
    first 10 lines of this file to quickly glance at its contents using a command.
 
