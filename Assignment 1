@@ -1,0 +1,155 @@
+a. Suppose you have a file named "data.txt" containing important information. Display the 
+   first 10 lines of this file to quickly glance at its contents using a command.
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ cat >> data.txt
+It doesn’t matter how successful or unsuccessful you are right now. What matters is whether your habits are putting you on the path toward success.
+
+Focus on getting 1 percent better every day.
+
+Lesson 2: Forget about setting goals. Focus on your system instead.
+
+Goals are about the results you want to achieve. Systems are about the processes that lead to those results.
+
+If you’re having trouble changing your habits, the problem isn’t you. The problem is your system. Bad habits repeat themselves again and again not because you don’t want to change, but because you have the wrong system for changtanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ head -10 data.txt
+Atomic Habits by James Clear is a comprehensive, practical guide on how to change your habits and get 1% better every day. Using a framework called the Four Laws of Behavior Change, Atomic Habits teaches readers a simple set of rules for creating good habits and breaking bad ones. Read the full summary to glean 3 key lessons from Atomic Habits, learn how to build a habit in 4 simple steps, and get a handy reference guide for the strategies recommended throughout the book.
+It is so easy to overestimate the importance of one defining moment and underestimate the value of making small improvements on a daily basis.
+
+Meanwhile, improving by 1 percent isn’t particularly notable— sometimes it isn’t even noticeable—but it can be far more meaningful, especially in the long run. The difference a tiny improvement can make over time is astounding. Here’s  how  the math works out: if you can  get 1 percent better each day for one year, you’ll end up thirty-seven times better by the time you’re done. Conversely, if you get 1 percent worse each day for one year, you’ll decline nearly down to zero. What starts as a small win or a minor setback accumulates into something much more.It doesn’t matter how successful or unsuccessful you are right now. What matters is whether your habits are putting you on the path toward success.
+
+Focus on getting 1 percent better every day.
+
+Lesson 2: Forget about setting goals. Focus on your system instead.
+
+Goals are about the results you want to achieve. Systems are about the processes that lead to those results.
+
+
+
+b. Now, to check the end of the file for any recent additions, display the last 5 lines of 
+   "data.txt" using another command.
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ tail -5 data.txt
+Lesson 2: Forget about setting goals. Focus on your system instead.
+
+Goals are about the results you want to achieve. Systems are about the processes that lead to those results.
+
+If you’re having trouble changing your habits, the problem isn’t you. The problem is your system. Bad habits repeat themselves again and again not because you don’t want to change, but because you have the wrong system for cha
+
+
+c. In a file named "numbers.txt," there are a series of numbers. Display the first 15 lines of 
+   this file to analyze the initial data set.
+
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ cat > numbers.txt
+1
+2
+3
+4
+5
+6
+7
+
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ head -15 numbers.txt
+1
+2
+3
+4
+5
+6
+7
+
+8
+9
+10
+11
+12
+13
+14
+
+
+
+d. To focus on the last few numbers of the dataset, display the last 3 lines of "numbers.txt". 
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ tail -3 numbers.txt
+18
+19
+20
+
+e. Imagine you have a file named "input.txt" with text content. Use a command to translate 
+   all lowercase letters to uppercase in "input.txt" and save the modified text in a new file 
+   named "output.txt." 
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ cat > input.txt
+tanu
+panu
+sneha
+tejas
+pranali
+namrata
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ cat input.txt | tr [a-z] [A-Z]
+TANU
+PANU
+SNEHA
+TEJAS
+PRANALI
+NAMRATA
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ touch output.txt
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ cp input.txt output.txt
+
+
+f. In a file named "duplicate.txt," there are several lines of text, some of which are 
+   duplicates. Use a command to display only the unique lines from "duplicate.txt." 
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ cat > duplicate.txt
+Hello, My name is Tanvee
+Hello, My name is Tanvee
+I am PG-Dac student
+I am PG-Dac student
+I am a student of Cdac Mumbai
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ uniq duplicate.txt
+Hello, My name is Tanvee
+I am PG-Dac student
+I am a student of Cdac Mumbai
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ uniq -d duplicate.txt
+Hello, My name is Tanvee
+I am PG-Dac student
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ uniq -u duplicate.txt
+I am a student of Cdac Mumbai
+
+
+g. In a file named "fruit.txt," there is a list of fruits, but some fruits are repeated. Use a 
+   command to display each unique fruit along with the count of its occurrences in 
+   "fruit.txt."
+
+
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ cat > fruit.txt
+apple
+apple
+mango
+banana
+banana
+watermelon
+grapes
+grapes
+tanvee@LAPTOP-2EIP57DT:~/LinuxAssignment/new$ uniq -c fruit.txt
+      1 apple
+      1 apple
+      1 mango
+      2 banana
+      1 watermelon
+      2 grapes
+
