@@ -134,3 +134,64 @@ drwxr-xr-x 2 tanvee tanvee 4096 Mar  9 10:04 mydir
 -rwxr-xr-x 1 tanvee tanvee   40 Mar  9 09:52 script.sh
 tanvee@LAPTOP-2EIP57DT:~/ShellProgram/Assignment2$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/oraclexe/app/oracle/product/11.2.0/server/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/MinGW/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Java/jdk-21/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Tejas Eknath Naik/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/Tejas Eknath Naik/AppData/Local/Microsoft/WindowsApps:/snap/bin
+
+
+
+
+PART B
+
+
+Identify True or False: 
+
+1. ls is used to list files and directories in a directory. => TRUE 
+
+2. mv is used to move files and directories. => TRUE
+
+3. cd is used to copy files and directories. => FALSE
+
+4. pwd stands for "print working directory" and displays the current directory. => TRUE
+
+5. grep is used to search for patterns in files. => TRUE
+
+6. chmod 755 file.txt gives read, write, and execute permissions to the owner, and read and execute 
+permissions to group and others. => TRUE
+
+7. mkdir -p directory1/directory2 creates nested directories, creating directory2 inside directory1 
+if directory1 does not exist. => TRUE
+
+8. rm -rf file.txt deletes a file forcefully without confirmation. => TRUE
+
+Identify the Incorrect Commands: 
+1. chmodx is used to change file permissions. => chmod
+
+2. cpy is used to copy files and directories. => cp
+
+3. mkfile is used to create a new file. => mkdir,cat,touch
+
+
+4. catx is used to concatenate files. => false
+
+5. rn is used to rename files. => mv
+
+
+
+PART C
+
+
+tanvee@LAPTOP-2EIP57DT:~/ShellProgram/Assignment2$ vi C7.sh
+tanvee@LAPTOP-2EIP57DT:~/ShellProgram/Assignment2$ ./C7.sh
+1
+2
+3
+4
+5
+tanvee@LAPTOP-2EIP57DT:~/ShellProgram/Assignment2$ cat C7.sh
+#!/bin/bash
+i=1
+while [[ i -le 5 ]]
+do
+        echo $i
+        i=$(($i+1))
+done
+tanvee@LAPTOP-2EIP57DT:~/ShellProgram/Assignment2$
+
